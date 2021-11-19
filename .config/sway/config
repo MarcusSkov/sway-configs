@@ -117,7 +117,7 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	bindsym $mod+g exec $gaming
 
 	# Start Unity Hub
-	bindsym $mod+u exec unityhub
+	bindsym $mod+u exec godot
 
 	# Start Blender
 	bindsym $mod+Shift+b exec blender
@@ -129,7 +129,7 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	bindsym $mod+n exec n -e
 
 	# Screenshoot (Full Screen)
-	bindsym Alt+Shift+4 exec grim ~/Nextcloud/Screenshots/Screenshot $(date +%Y-%m-%d_%H-%m-%s).png
+	bindsym Alt+Shift+4 exec grim ~/Nextcloud/Screenshots/Screenshot\ $(date +%Y-%m-%d_%H-%m-%s).png
 
 	# Screemsjpt (Portion)
 	bindsym Alt+Shift+Ctrl+4 exec grim -t jpeg -g "$(slurp)" ~/Nextcloud/Screenshots/Screenshot\ $(date +%Y-%m-%d_%H-%m-%s).png

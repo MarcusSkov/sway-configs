@@ -6,6 +6,9 @@ fpath=(~/.zsh/zsh-completions/src $fpath)
 # Default configs
 export EDITOR="nvim"
 
+# Changes location of starship config files
+export STARSHIP_CONFIG=~/.config/starship/config.toml
+
 # Zoxide cd Search
 eval "$(zoxide init zsh)"
 
@@ -28,6 +31,8 @@ export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 # nnn aliases
 alias nnn "nnn -e"
 alias ls "nnn -e"
-alias vim=nvim
 
 export NNN_FIFO=/tmp/nnn.fifo
+
+
+eval "$(starship init zsh)"

@@ -17,6 +17,7 @@ set $right l
 
 set $term alacritty
 set $browser librewolf
+set $game-engine godot
 set $gaming lutris
 set $password keepassxc
 set $menu wofi -ia --lines=8 --width=720 \
@@ -25,8 +26,11 @@ set $menu wofi -ia --lines=8 --width=720 \
 
 gaps inner 10
 gaps outer 10
-# smart_gaps on
 
+### Window Default Behaviours
+for_window [app_id=Alacritty] floating enable
+for_window [app_id=qbittorrent] floating enable
+for_window [app_id=keepassxc] floating enable
 
 ### Output configuration
 #
@@ -113,11 +117,11 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	# Start TOR
 	bindsym $mod+t exec torbrowser-launcher
 
-	# Start Lutris
-	bindsym $mod+g exec $gaming
+    # Start Gotdot
+    bindsym $mod+g exec $game-engine
 
-	# Start Unity Hub
-	bindsym $mod+u exec godot
+	# Start Lutris
+	bindsym $mod+Shift+g exec $gaming
 
 	# Start Blender
 	bindsym $mod+Shift+b exec blender
@@ -126,7 +130,7 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	bindsym $mod+Alt+e exec emote
 
 	# Open nnn
-	bindsym $mod+n exec n -e
+	bindsym $mod+n exec $term -e "nnn"
 
 	# Screenshoot (Full Screen)
 	bindsym Alt+Shift+4 exec grim ~/Nextcloud/Screenshots/Screenshot\ $(date +%Y-%m-%d_%H-%m-%s).png
@@ -135,9 +139,9 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	bindsym Alt+Shift+Ctrl+4 exec grim -t jpeg -g "$(slurp)" ~/Nextcloud/Screenshots/Screenshot\ $(date +%Y-%m-%d_%H-%m-%s).png
 
 	# Volume Controls
-	bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
-	bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
-	bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
+	bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+	bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+	bindsym --locked XF86AudioMute exec pactl set-sink-volume @DEFAULT_SINK@ toggle
 	
 	bindsym --locked XF86AudioPlay exec playerctl play-pause
 	bindsym --locked XF86AudioNext exec playerctl next

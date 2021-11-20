@@ -34,5 +34,4 @@ alias ls "nnn -e"
 
 export NNN_FIFO=/tmp/nnn.fifo
 
-
 eval "$(starship init zsh)"

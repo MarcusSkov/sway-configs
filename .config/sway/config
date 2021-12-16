@@ -18,6 +18,7 @@ set $right l
 set $term alacritty
 set $browser librewolf
 set $game-engine godot
+set $ide rider
 set $gaming lutris
 set $password keepassxc
 set $menu wofi -ia --lines=8 --width=720 \
@@ -120,6 +121,9 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
     # Start Gotdot
     bindsym $mod+g exec $game-engine
 
+    # Start Gotdot
+    bindsym $mod+Shift+R exec $ide
+
 	# Start Lutris
 	bindsym $mod+Shift+g exec $gaming
 
@@ -141,7 +145,7 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	# Volume Controls
 	bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 	bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-	bindsym --locked XF86AudioMute exec pactl set-sink-volume @DEFAULT_SINK@ toggle
+	bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 	
 	bindsym --locked XF86AudioPlay exec playerctl play-pause
 	bindsym --locked XF86AudioNext exec playerctl next

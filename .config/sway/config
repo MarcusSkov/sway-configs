@@ -67,8 +67,8 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 #
  exec swayidle -w \
     timeout 600 'swaylock -f -i ~/Nextcloud/Photos/Wallpapers/Paint.png' \
-    timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 000000'
+    timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' 
+#    before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 600 seconds of inactivity, then turn off
 # your displays after another 600 seconds, and turn your screens back on when

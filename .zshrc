@@ -9,8 +9,6 @@
 # Default configs
 export EDITOR="nvim"
 
-eval $(keychain --eval --quiet id_ed25519 id_rsa)
-
 # Changes location of starship config files
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 

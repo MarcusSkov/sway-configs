@@ -22,7 +22,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'rust-lang/rust.vim'
 Plug 'dense-analysis/ale'
 Plug 'ycm-core/YouCompleteMe', {'do': './install.py --all'}
 

@@ -65,7 +65,9 @@ window#waybar {
 #tray,
 #pulseaudio,
 #network,
-#temperature {
+#temperature,
+#idle_inhibitor,
+#language {
 /*	background-color: #0F1923; */
 	padding: 3px 10px;
 	border-radius: 5px;
@@ -115,4 +117,12 @@ window#waybar {
 #pulseaudio.muted {
 	background-color: @ColorCore;
 	color: @ColorWhite;
+}
+
+#idle_inhibitor {
+    padding: 0 20px;
+}
+
+#idle_inhibitor.activated {
+    background: #F1692F;
 }

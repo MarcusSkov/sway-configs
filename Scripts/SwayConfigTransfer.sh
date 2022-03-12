@@ -1,14 +1,26 @@
 # Copy Sway files to config repo
-cp ~/.config/sway/config ~/SwayConfigs/.config/sway
+cp ~/.config/sway/config ~/dotfiles-sway/.config/sway
 
 # Copy Waybar config files to git repo
-cp ~/.config/waybar/* ~/SwayConfigs/.config/waybar/
+cp ~/.config/waybar/* ~/dotfiles-sway/.config/waybar/
 
 # Copy Profile 
-cp /etc/environment ~/SwayConfigs/etc/
+cp /etc/environment ~/dotfiles-sway/etc/
+
+# Alacritty
+cp ~/.config/alacritty/* ~/dotfiles-sway/.config/alacritty/
 
 # Copy zshrc config file
-cp ~/.zshrc ~/SwayConfigs/
+cp ~/.zshrc ~/dotfiles-sway/
 
 # Copy NeoVim Config
-cp ~/.config/nvim/init.vim ~/SwayConfigs/.config/nvim/
+cp ~/.config/nvim/init.vim ~/dotfiles-sway/.config/nvim/
+
+# Copy Starship
+cp ~/.config/starship/config.toml ~/dotfiles-sway/.config/starship
+
+
+# Git Add Files
+cd ~/dotfiles-sway/
+git add .
+git commit -m "bot: updated dotfiles"

@@ -19,6 +19,7 @@ set $term alacritty
 set $browser librewolf
 set $game-engine godot
 set $ide rider
+set $file-manager thunar
 set $gaming lutris
 set $password keepassxc
 set $menu wofi -ia --lines=8 --width=720 \
@@ -32,25 +33,26 @@ gaps outer 10
 for_window [app_id=Alacritty] floating enable
 for_window [app_id=qbittorrent] floating enable
 for_window [app_id=keepassxc] floating enable
+for_window [app_id=thunar] floating enable
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
+# output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 #
 # Screen Output Configuration:
 #
 	output  DP-3 \
 		resolution 5120x1440 \
-		position 0,0 \
-		bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
+		position 0,0
+		# bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 
 	output  HDMI-A-1 \
 		resolution 3840x2160 \
 		position 5120,0 \
 		adaptive_sync on \
-		bg ~/Nextcloud/Photos/Wallpapers/4k/pexels-catia-matos.jpg fill \
-        scale 2
+	        scale 2
+		# bg ~/Nextcloud/Photos/Wallpapers/4k/pexels-catia-matos.jpg fill \
 
 	workspace 1 output DP-3
 	workspace 2 output DP-3
@@ -80,6 +82,11 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	input type:tablet_tool {
 		map_to_output DP-3
 	}
+
+    input type:keyboard {
+        xkb_layout "gb, us, dk",
+        xkb_options "grp:ctrls_toggle"
+    }
 
 #
 #
@@ -112,6 +119,9 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	bindsym $mod+z exec $browser
 	bindsym $mod+Shift+z exec firefox-developer-edition
 
+    # Start File Manager
+    bindsym $mod+n exec $file-manager
+
 	# Start Password Manager
 	bindsym $mod+p exec $password
 
@@ -132,9 +142,6 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 
 	# Open Emoji Keyboard
 	bindsym $mod+Alt+e exec emote
-
-	# Open nnn
-	bindsym $mod+n exec $term -e "nnn"
 
 	# Screenshoot (Full Screen)
 	bindsym Alt+Shift+4 exec grim ~/Nextcloud/Screenshots/Screenshot\ $(date +%Y-%m-%d_%H-%m-%s).png
@@ -306,12 +313,11 @@ client.focused  $white  $tar    $core    $white     $white
 ###################
 # Start Up Packages
 ###################
-
 exec keepassxc
 # exec nextcloud
 
-exec ~/SwayConfigs/Scripts/SwayConfigTransfer.sh
+exec ~/dotfiles-sway/Scripts/SwayConfigTransfer.sh
 
 exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 
-include /etc/sway/config.d/*
+include /etc/sway/config.d/* 

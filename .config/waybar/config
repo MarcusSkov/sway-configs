@@ -2,7 +2,7 @@
     "modules-left": ["sway/workspaces"],
 	"modules-center": ["clock"],
 
-    "modules-right": ["tray", "pulseaudio", "temperature", "battery", "cpu", "memory"],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "temperature", "battery", "cpu", "memory", "sway/language"],
 
     // Modules configuration
 	"sway/workspaces": {
@@ -99,5 +99,15 @@
 	
 	"tray": {
 		"spacing": 10
-	}
+	},
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "sway/language": {
+        "format": "{short} {variant}",
+    }
 }

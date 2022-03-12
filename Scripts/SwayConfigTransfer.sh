@@ -23,4 +23,5 @@ cp ~/.config/starship/config.toml ~/dotfiles-sway/.config/starship
 # Git Add Files
 cd ~/dotfiles-sway/
 git add .
-git commit -m "bot: updated dotfiles"
+git commit -m "bot: Updated dotfiles"
+git push

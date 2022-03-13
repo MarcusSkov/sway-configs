@@ -38,21 +38,21 @@ for_window [app_id=thunar] floating enable
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
+output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 #
 # Screen Output Configuration:
 #
 	output  DP-3 \
 		resolution 5120x1440 \
-		position 0,0
-		# bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
+		position 0,0 \
+		bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 
 	output  HDMI-A-1 \
 		resolution 3840x2160 \
 		position 5120,0 \
 		adaptive_sync on \
-	        scale 2
-		# bg ~/Nextcloud/Photos/Wallpapers/4k/pexels-catia-matos.jpg fill \
+        scale 2 \
+		bg ~/Nextcloud/Photos/Wallpapers/4k/pexels-catia-matos.jpg fill \
 
 	workspace 1 output DP-3
 	workspace 2 output DP-3

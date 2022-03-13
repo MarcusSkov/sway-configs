@@ -3,22 +3,22 @@ dotfiles for my Sway WM setup.
 
 Contains configurations for the following:
 
-## Sway
+## Sway (Window Manager)
 https://swaywm.org/
 
-## Waybar
+## Waybar (Bar)
 https://github.com/Alexays/Waybar
 
 ## Alacritty (Terminal)
 https://alacritty.org/
 
-## ZSH
+## ZSH (Shell)
 https://www.zsh.org/
 
-## NeoVim
+## NeoVim (Terminal Editor)
 https://neovim.io/
 
-## Starship
+## Starship (Shell Prompt)
 https://starship.rs/
 
 ## Environment variables

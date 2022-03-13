@@ -314,7 +314,7 @@ client.focused  $white  $tar    $core    $white     $white
 # Start Up Packages
 ###################
 exec keepassxc
-# exec nextcloud
+exec nextcloud
 
 exec ~/dotfiles-sway/Scripts/SwayConfigTransfer.sh
 

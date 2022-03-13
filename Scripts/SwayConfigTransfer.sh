@@ -19,8 +19,12 @@ cp ~/.config/nvim/init.vim ~/dotfiles-sway/.config/nvim/
 # Copy Starship
 cp ~/.config/starship/config.toml ~/dotfiles-sway/.config/starship
 
+# Copy pacman config files
+cp /etc/pacman.conf ~/dotfiles-sway/etc/
 
+###############
 # Git Add Files
+##############
 cd ~/dotfiles-sway/
 git add .
 git commit -m "bot: Updated dotfiles"

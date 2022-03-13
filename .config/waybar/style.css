@@ -30,6 +30,7 @@ window#waybar {
     color: #fff;
     padding-right: 18px;
     padding-bottom: 5px;
+    margin-left: 5px;
 }
 
 #workspaces button.focused {
@@ -41,6 +42,9 @@ window#waybar {
 #workspaces button:hover {
 	border-color: transparent;
 	background: @ColorCore;
+
+    box-shadow: inherit;
+    text-shadow: inherit;
 }
 
 

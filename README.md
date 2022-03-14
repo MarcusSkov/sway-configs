@@ -1,24 +1,18 @@
 # dotfiles-sway
 dotfiles for my Sway WM setup.
 
-Contains configurations for the following:
+Contains configurations for the following setup:
 
-## Sway (Window Manager)
-https://swaywm.org/
+**WM:** [Sway](https://swaywm.org/)
 
-## Waybar (Bar)
-https://github.com/Alexays/Waybar
+**Bar:** [WayBar](https://github.com/Alexays/Waybar)
 
-## Alacritty (Terminal)
-https://alacritty.org/
+**Terminal:** [Alacritty](https://alacritty.org/)
 
-## ZSH (Shell)
-https://www.zsh.org/
+**Shell:** [ZSH](https://wiki.archlinux.org/title/Zsh)
 
-## NeoVim (Terminal Editor)
-https://neovim.io/
+**Editor:** [NeoVim](https://neovim.io/)
 
-## Starship (Shell Prompt)
-https://starship.rs/
+**File Manager:** [Thunar](https://github.com/xfce-mirror/thunar)
 
-## Environment variables
+**Shell Prompt:** [Starship](https://starship.rs/)

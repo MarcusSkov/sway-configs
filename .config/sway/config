@@ -19,7 +19,7 @@ set $term alacritty
 set $browser librewolf
 set $game-engine godot
 set $ide rider
-set $file-manager thunar
+set $file-manager nemo
 set $gaming lutris
 set $password keepassxc
 set $menu wofi -ia --lines=8 --width=720 \
@@ -33,7 +33,7 @@ gaps outer 10
 for_window [app_id=Alacritty] floating enable
 for_window [app_id=qbittorrent] floating enable
 for_window [app_id=keepassxc] floating enable
-for_window [app_id=thunar] floating enable
+for_window [app_id=nemo] floating enable
 
 ### Output configuration
 #
@@ -314,7 +314,6 @@ client.focused  $white  $tar    $core    $white     $white
 # Start Up Packages
 ###################
 exec keepassxc
-exec nextcloud
 
 exec ~/dotfiles-sway/Scripts/SwayConfigTransfer.sh
 

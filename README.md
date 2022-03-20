@@ -1,6 +1,4 @@
 # dotfiles-sway
-dotfiles for my Sway WM setup.
-
 Contains configurations for the following setup:
 
 **WM:** [Sway](https://swaywm.org/)

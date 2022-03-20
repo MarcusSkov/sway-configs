@@ -23,7 +23,7 @@ cp ~/.config/starship/config.toml ~/dotfiles-sway/.config/starship
 cp /etc/pacman.conf ~/dotfiles-sway/etc/
 
 # Copy MangoHud config
-cp ~/etc/MangoHud/MangoHud.conf ~/dotfiles-sway/.config/MangoHud
+cp ~/.config/MangoHud/MangoHud.conf ~/dotfiles-sway/.config/MangoHud
 
 ###############
 # Git Add Files

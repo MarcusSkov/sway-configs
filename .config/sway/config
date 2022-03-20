@@ -315,7 +315,7 @@ client.focused  $white  $tar    $core    $white     $white
 ###################
 exec keepassxc
 
-exec ~/dotfiles-sway/Scripts/SwayConfigTransfer.sh
+exec ~/dotfiles-sway/SwayConfigTransfer.sh
 
 exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 

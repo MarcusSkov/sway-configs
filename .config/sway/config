@@ -17,7 +17,8 @@ set $right l
 
 set $term alacritty
 set $browser librewolf
-set $game-engine godot
+set $godot godot
+set $unreal ./UnrealEngine-release/Engine/Binaries/Linux/UnrealEditor
 set $ide rider
 set $file-manager nemo
 set $gaming lutris
@@ -129,10 +130,13 @@ output * bg ~/Nextcloud/Photos/Wallpapers/Paint.png fill
 	bindsym $mod+t exec torbrowser-launcher
 
     # Start Gotdot
-    bindsym $mod+g exec $game-engine
+    bindsym $mod+g exec $godot
 
-    # Start Gotdot
-    bindsym $mod+Shift+R exec $ide
+    # Start Unreal
+    bindsym $mod+u exec $unreal
+
+    # Start IDE
+    bindsym $mod+Shift+r exec $ide
 
 	# Start Lutris
 	bindsym $mod+Shift+g exec $gaming

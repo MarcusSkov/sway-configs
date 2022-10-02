@@ -25,6 +25,10 @@ cp /etc/pacman.conf ~/dotfiles-sway/etc/
 # Copy MangoHud config
 cp ~/.config/MangoHud/MangoHud.conf ~/dotfiles-sway/.config/MangoHud
 
+# Copy GTK3 configs
+cp /etc/gtk-3.0/settings.ini ~/dotfiles-sway/etc/gtk-3.0
+
+
 ###############
 # Git Add Files
 ##############
